@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dotted-underline {
+  border: none;
+  position: relative; 
+}
+
+.dotted-underline::after {
+  content: ''; 
+  position: absolute; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0.6px; 
+  background-image: 
+    linear-gradient(90deg, #2E2E2E 0.6px, transparent 0.6px); 
+  background-size: 5px 0.6px;
+  background-repeat: repeat;
+}
+
+.nav-link {
+  position: relative;
+  color: #666666; /* Alapértelmezett szín */
+  text-decoration: none; /* Eltávolítja az alapértelmezett aláhúzást */
+  transition: color 0.3s ease; /* Szín átmenet animáció */
+}
+
+.nav-link::after {
+  content: ''; /* Pseudo-element tartalom */
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Kicsit lent a szöveg alatt */
+  width: 100%; /* Az aláhúzás hossza a szöveg hossza */
+  height: 1px; /* Az aláhúzás vastagsága */
+  background-color: #ffffff; /* Aláhúzás színe */
+  transform: scaleX(0); /* Kiindulási állapot: nem látható */
+  transform-origin: left; /* Az aláhúzás balról terjed ki */
+  transition: transform 0.5s ease; /* Animáció sebessége */
+}
+
+.nav-link:hover {
+  color: #ffffff; /* Szöveg színe hover állapotban */
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1); /* Hover esetén a teljes hosszra terjed */
+}
+
+.nav-link:not(:hover)::after {
+  transform: scaleX(0); /* Eltűnés jobbról, ha nem hover állapotban van */
+  transform-origin: right; /* Az eltűnés jobbról történik */
+}
