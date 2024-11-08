@@ -2,59 +2,131 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Universal reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Prevents unwanted horizontal scrolling */
+body {
+  overflow-x: hidden;
+  font-family: sans-serif; /* Optional: set a default font family */
+}
+
+/* Navbar styles */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  height: 60px; /* Set a consistent navbar height */
+  background-color: #000000;
+  transition: transform 0.3s ease-in-out;
+  border-bottom: 1px solid #333; /* Optional: subtle bottom border */
+}
+
+/* Dotted underline styles for specific elements */
 .dotted-underline {
   border: none;
-  position: relative; 
+  position: relative;
 }
 
 .dotted-underline::after {
-  content: ''; 
-  position: absolute; 
+  content: '';
+  position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 0.6px; 
-  background-image: 
-    linear-gradient(90deg, #2E2E2E 0.6px, transparent 0.6px); 
+  height: 0.6px;
+  background-image: linear-gradient(90deg, #2E2E2E 0.6px, transparent 0.6px);
   background-size: 5px 0.6px;
   background-repeat: repeat;
 }
 
+/* Navbar link styles */
 .nav-link {
   position: relative;
-  color: #666666; /* Alapértelmezett szín */
-  text-decoration: none; /* Eltávolítja az alapértelmezett aláhúzást */
-  transition: color 0.3s ease; /* Szín átmenet animáció */
+  color: #666666; /* Light gray by default */
+  text-decoration: none;
+  transition: color 0.5s ease;
 }
 
+/* Underline effect for navbar links */
 .nav-link::after {
-  content: ''; /* Pseudo-element tartalom */
+  content: '';
   position: absolute;
   left: 0;
-  bottom: -2px; /* Kicsit lent a szöveg alatt */
-  width: 100%; /* Az aláhúzás hossza a szöveg hossza */
-  height: 1px; /* Az aláhúzás vastagsága */
-  background-color: #ffffff; /* Aláhúzás színe */
-  transform: scaleX(0); /* Kiindulási állapot: nem látható */
-  transform-origin: left; /* Az aláhúzás balról terjed ki */
-  transition: transform 0.5s ease; /* Animáció sebessége */
+  bottom: -2px;
+  width: 100%;
+  height: 1.5px;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
 }
 
+/* Hover effects for links */
 .nav-link:hover {
-  color: #ffffff; /* Szöveg színe hover állapotban */
+  color: #ffffff;
 }
 
 .nav-link:hover::after {
-  transform: scaleX(1); /* Hover esetén a teljes hosszra terjed */
+  transform: scaleX(1);
 }
 
 .nav-link:not(:hover)::after {
-  transform: scaleX(0); /* Eltűnés jobbról, ha nem hover állapotban van */
-  transform-origin: right; /* Az eltűnés jobbról történik */
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+/* Styling for the Get Started button */
+.right-links a {
+  color: #666666;
+  transition: color 0.3s ease;
+}
+
+.right-links a:hover {
+  color: #ffffff;
+}
+
+/* Button styling with hover effect */
+.get-started-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid #666666; /* Initial border color */
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.get-started-button:hover {
+  background-color: #6b21a8; /* Purple background on hover */
+  border-color: transparent;
+}
+
+.get-started-button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.5rem;
+  background-color: #6b21a8;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.get-started-button:hover span {
+  background-color: #ffffff;
+  color: #6b21a8;
+}
+
+/* Optional styling for hiding border if not needed */
+.border-dark-gray {
+  border: none;
 }

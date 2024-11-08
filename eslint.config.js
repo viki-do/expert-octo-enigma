@@ -35,4 +35,15 @@ export default [
       ],
     },
   },
+  module.exports = {
+    parserOptions: {
+      ecmaVersion: 2020,  // or higher
+      sourceType: 'module', // This allows the use of import/export
+    },
+    env: {
+      node: true,  // Ensure ESLint understands Node.js environment
+      browser: true, // Add browser if you need browser globals
+    },
+  }
+  
 ]
