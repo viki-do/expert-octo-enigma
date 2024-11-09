@@ -1,17 +1,16 @@
 import React from 'react'
 import Nav from './components/Nav'
-import Hero from './components/Hero'
 import Footer from './components/Footer'
-import TopBanner from './components/TopBanner'
-
+import AnimatedText from './components/AnimatedText'
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const App = () => {
   return (
-    <div>
+    <Router>
       <Nav />
-      <Hero/>
+      <AnimatedText />
       <Footer />
-    </div>
+    </Router>
   )
 }
 

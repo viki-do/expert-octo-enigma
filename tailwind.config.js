@@ -11,7 +11,7 @@ module.exports = {
       xl: ['24px', '29.26px'],
       '2xl': ['28px', '34.5px'],
       '3xl': ['37px', '44px'],
-      '4xl': ['48px', '58px'],
+      '4xl': ['50px', '55px'],
       '5xl': ['56px', '68px'],
       '6xl': ['64px', '70px'],
       '7xl': ['72px', '84px'],
@@ -28,6 +28,7 @@ module.exports = {
         "dark-gray": "#666666",
         "purple": "#511881" ,
         "baby-pink": "#BEA8D1",
+        "baby-pink2": "#E7CCFF",
       },
       screens: {
         "wide": "1440px",
