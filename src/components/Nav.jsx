@@ -114,7 +114,7 @@ const Nav = ({ setShowAnimatedText }) => {
           showNav ? 'translate-y-0' : '-translate-y-full'
         } flex justify-between items-center p-4 md:px-36 md:py-10 text-white ${
           isTop ? 'bg-black' : 'bg-[#0a0a0a]'
-        } lg:px-32 lg:py-4 ${
+        } lg:px-32 lg:py-10 ${
           isTop ? 'dotted-underline' : ''
         } border-dark-gray`} 
       > 
@@ -127,7 +127,7 @@ const Nav = ({ setShowAnimatedText }) => {
             {leftLinks.map((link) => (
               <div 
                 key={link.href} 
-                className="nav-item bg-pink-600 py-5"
+                className="nav-item py-5"
                 onMouseEnter={link.label === "Use Cases" ? handleUseCasesMouseEnter : null}
                 onMouseLeave={link.label === "Use Cases" ? handleUseCasesMouseLeave : null}
                 ref={link.label === "Use Cases" ? useCasesRef : null}
@@ -158,11 +158,11 @@ const Nav = ({ setShowAnimatedText }) => {
               ))}
             <a 
               href="getStarted" 
-              className="relative inline-flex items-center px-4 py-2 ml-4 rounded-full text-white bg-transparent border border-dark-gray transition-all duration-500 hover:bg-purple hover:border-transparent hover:text-white text-sm"
+              className="relative inline-flex items-center px-4 py-2 ml-4 rounded-full text-white bg-transparent border border-dark-gray transition-all duration-500 hover:bg-purple2 hover:border-transparent hover:text-white text-sm"
               key="getStarted"
             >
               Get Started
-              <span className="ml-2 flex items-center justify-center w-6 h-6 rounded-full bg-purple text-white transition-all duration-500 hover:bg-white hover:text-purple">
+              <span className="ml-2 flex items-center justify-center w-6 h-6 rounded-full bg-purple2 text-white transition-all duration-500 hover:bg-white hover:text-purple2">
                 <span className="flex items-center justify-center h-full w-full">
                   <FontAwesomeIcon icon={faArrowRight} style={{ color: "#ffffff" }} />
                 </span>
@@ -170,7 +170,7 @@ const Nav = ({ setShowAnimatedText }) => {
             </a>
           </div>
           <div className="flex items-center md:hidden">
-            <img src={hamburger} alt="hamburger" height={24} width={24} className="cursor-pointer" />
+            <img src={hamburger} alt="hamburger" height={25} width={25} className="cursor-pointer" />
           </div>
         </div>
       </nav>
@@ -178,9 +178,9 @@ const Nav = ({ setShowAnimatedText }) => {
       {/* Display blue div based on the calculated visibility condition */}
       {shouldShowBlueDiv && useCasesRef.current && (
         <div 
-          className="fixed bg-blue-500 text-white p-64 rounded-md"
+          className="fixed bg-purple3 text-white p-64 rounded-bottom"
           style={{
-            top: useCasesRef.current.getBoundingClientRect().bottom + window.scrollY,
+            top: useCasesRef.current.getBoundingClientRect().bottom + window.scroll + 4,
             left: useCasesRef.current.getBoundingClientRect().left + window.scrollX,
             zIndex: 100, // Ensure it is not hidden behind other elements
           }}
@@ -210,3 +210,4 @@ const Nav = ({ setShowAnimatedText }) => {
 };
 
 export default Nav;
+

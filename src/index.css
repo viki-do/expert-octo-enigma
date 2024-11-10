@@ -12,6 +12,7 @@
 body {
   overflow-x: hidden;
   font-family: sans-serif; 
+  background-color: #000000;
 }
 
 
@@ -121,4 +122,8 @@ nav {
 
 .border-dark-gray {
   border: none;
+}
+
+.rounded-bottom{
+  border-radius: 0 0 15px 15px;
 }

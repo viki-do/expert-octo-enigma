@@ -24,17 +24,21 @@ module.exports = {
         "pale-blue": "#F5F6FF",
         "white": "rgba(255, 255, 255)",
         "black": "#000000",
-        "purple": "#8200FF",
+        "purple2": "#8200FF",
         "dark-gray": "#666666",
         "purple": "#511881" ,
         "baby-pink": "#BEA8D1",
         "baby-pink2": "#E7CCFF",
+        "purple3": "#1C0430",
       },
       screens: {
         "wide": "1440px",
       },
       animation: {
         scroll: 'scroll 15s linear infinite',
+      },
+      padding: {
+        "57": "228px", 
       },
       keyframes: {
         scroll: {
