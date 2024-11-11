@@ -127,7 +127,7 @@ const Nav = ({ setShowAnimatedText }) => {
             {leftLinks.map((link) => (
               <div 
                 key={link.href} 
-                className="nav-item py-5"
+                className="nav-item py-8"
                 onMouseEnter={link.label === "Use Cases" ? handleUseCasesMouseEnter : null}
                 onMouseLeave={link.label === "Use Cases" ? handleUseCasesMouseLeave : null}
                 ref={link.label === "Use Cases" ? useCasesRef : null}

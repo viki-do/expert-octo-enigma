@@ -39,6 +39,7 @@ module.exports = {
       },
       padding: {
         "57": "228px", 
+        "86": "344px",
       },
       keyframes: {
         scroll: {
