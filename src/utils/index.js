@@ -1,3 +1,4 @@
+
 export const logos = [
     { logo: '/assets/images/openAI.png' },
     { logo: '/assets/images/anth.png' },
@@ -39,3 +40,23 @@ export const navLink = [
   export const leftLinks = navLink.slice(0, 6); 
   export const rightLinks = navLink.slice(6);    
   
+  export const topDropdownLinks = [
+    {
+      id: 1,
+      icon: "/assets/icons/translate.png",
+      title: "Language models",
+      description: "Electrify your large language models",
+    },
+    {
+      id: 2,
+      icon: "/assets/icons/search.png",
+      title: "Search evaluation",
+      description: "Power your search engine with human evaluation",
+    },
+    {
+      id: 3,
+      icon: "/assets/icons/content.png",
+      title: "Content moderation",
+      description: "Moderate your content like never before",
+    },
+  ];

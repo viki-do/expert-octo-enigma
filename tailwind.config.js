@@ -3,7 +3,7 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
     fontSize: {
-      xs: ['10px', '14px'],
+      xs: ['12px', '15px'],
       sm: ['13px', '18px'],
       base: ['16px', '19.5px'],
       md: ['18px', '24px'],
@@ -30,6 +30,8 @@ module.exports = {
         "baby-pink": "#BEA8D1",
         "baby-pink2": "#E7CCFF",
         "purple3": "#1C0430",
+        "dropdown-purple": "#28113B",
+        "purple-text": "#7C6E88",
       },
       screens: {
         "wide": "1440px",
@@ -38,8 +40,8 @@ module.exports = {
         scroll: 'scroll 15s linear infinite',
       },
       padding: {
-        "57": "228px", 
-        "86": "344px",
+        "56": "224px", 
+        
       },
       keyframes: {
         scroll: {
