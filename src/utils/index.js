@@ -60,3 +60,37 @@ export const navLink = [
       description: "Moderate your content like never before",
     },
   ];
+
+  export const useCases = [
+    {
+      imgSrc: "/assets/icons/instruct-and-rlhf.png",
+      alt: "Instruct and RLHF training",
+      text: "Instruct and RLHF training"
+    },
+    {
+      imgSrc: "/assets/icons/customer-support.png",
+      alt: "Customer Support",
+      text: "Customer Support"
+    },
+    {
+      imgSrc: "/assets/icons/gpt.png",
+      alt: "GPT Fine tuning",
+      text: "GPT Fine tuning"
+    },
+    {
+      imgSrc: "/assets/icons/sentiment-analysis.png",
+      alt: "Sentiment Analysis",
+      text: "Sentiment Analysis"
+    },
+    {
+      imgSrc: "/assets/icons/financial-categorization.png",
+      alt: "Financial Categorization",
+      text: "Financial Categorization"
+    },
+    {
+      imgSrc: "/assets/icons/other-use-cases.png",
+      alt: "Hundreds of other uses",
+      text: "Hundreds of other uses"
+    }
+  ];
+  

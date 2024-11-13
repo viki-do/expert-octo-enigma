@@ -5,7 +5,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import hamburger from '/assets/icons/hamburger.svg';
 import TopBanner from './TopBanner';
 import Hero from './Hero';
-import { topDropdownLinks } from '../utils/index'; // Importáljuk a topDropdownLinks adatokat
+import { topDropdownLinks, useCases } from '../utils/index'; // Importáljuk a topDropdownLinks adatokat
 
 const Nav = ({ setShowAnimatedText }) => {
   const [showNav, setShowNav] = useState(true);
@@ -13,7 +13,6 @@ const Nav = ({ setShowAnimatedText }) => {
   const [hideTimeout, setHideTimeout] = useState(null);
   const [isTop, setIsTop] = useState(true);
   const [hasScrolledDown, setHasScrolledDown] = useState(false);
-  const [showHero, setShowHero] = useState(true);
   const [isUseCasesHovered, setIsUseCasesHovered] = useState(false);
   const [isBlueDivHovered, setIsBlueDivHovered] = useState(false);
 
@@ -24,17 +23,7 @@ const Nav = ({ setShowAnimatedText }) => {
     const currentScrollY = window.scrollY;
     const animatedTextElement = document.getElementById("animatedText");
 
-    if (animatedTextElement) {
-      const heroSection = document.getElementById("heroSection");
-      const heroBottom = heroSection.getBoundingClientRect().bottom + window.scrollY;
-
-      setShowAnimatedText(currentScrollY > heroBottom);
-
-      const rect = animatedTextElement.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      setShowHero(rect.bottom <= 0 || rect.top >= windowHeight);
-    }
-
+   
     if (currentScrollY <= scrollThreshold) {
       setIsTop(true);
       setShowNav(true);
@@ -142,11 +131,11 @@ const Nav = ({ setShowAnimatedText }) => {
               ))}
             <a
               href="getStarted"
-              className="relative inline-flex items-center px-4 py-2 ml-4 rounded-full text-white bg-transparent border border-dark-gray transition-all duration-500 hover:bg-purple2 hover:border-transparent hover:text-white text-sm"
+              className="relative inline-flex items-center px-4 py-2 ml-4 rounded-full bg-transparent border border-dark-gray transition-all duration-500 hover:bg-purple2 hover:border-transparent hover:text-white text-sm"
               aria-label="Get Started"
             >
               Get Started
-              <span className="ml-2 flex items-center justify-center w-6 h-6 rounded-full bg-purple2 text-white transition-all duration-500 hover:bg-white hover:text-purple2">
+              <span className="ml-2 flex items-center justify-center w-6 h-6 rounded-full bg-purple2 transition-all duration-500 hover:bg-white hover:text-purple2">
                 <span className="flex items-center justify-center h-full w-full">
                   <FontAwesomeIcon icon={faArrowRight} style={{ color: "#ffffff" }} />
                 </span>
@@ -163,52 +152,68 @@ const Nav = ({ setShowAnimatedText }) => {
         <div
           className="fixed bg-purple3 text-white rounded-bottom"
           style={{
-            top: useCasesRef.current.getBoundingClientRect().bottom + window.scrollY,
+            top: useCasesRef.current.getBoundingClientRect().bottom + window.scrollY -2,
             left: useCasesRef.current.getBoundingClientRect().left + window.scrollX,
             zIndex: 100,
-            height: 'auto', // To allow the div to expand based on its content
+            height: 'auto', 
           }}
           onMouseEnter={handleBlueDivMouseEnter}
           onMouseLeave={handleBlueDivMouseLeave}
           role="tooltip"
         >
-          <div className='h-full w-full flex flex-col'>
+          <div className='h-full w-full flex flex-col '>
             <div className="flex flex-row h-44 p-5 gap-4">
               {topDropdownLinks.map((item) => (
-                <div key={item.id} className="bg-dropdown-purple w-48 flex flex-col justify-center items-center h-full text-center rounded-md">
-                  <div className='flex flex-col justify-center items-center'>
-                    <div className="w-7 h-7 flex justify-center items-center">
-                      <img src={item.icon} alt={`${item.title} icon`} />
-                    </div>
-                    <p className='pt-3 pb-1'>{item.title}</p>
-                    <p className="text-purple-text text-xs">{item.description}</p>
+                <div
+                key={item.id}
+                className="bg-dropdown-purple w-48 flex flex-col justify-center items-center h-full text-center rounded-lg hover:bg-[#382349] hover:cursor-pointer"
+              >
+                <div className='flex flex-col justify-center items-center'>
+                  <div className="w-7 h-7 flex justify-center items-center">
+                    <img src={item.icon} alt={`${item.title} icon`} />
                   </div>
+                  <p className='pt-3 pb-1'>{item.title}</p>
+                  <p className="text-purple-text text-xs">{item.description}</p>
                 </div>
+              </div>
+              
               ))}
             </div>
-
-            <div className="flex-1 w-full bg-pink-600">
-              bottom
+            <div className="flex-1 w-full rounded-bottom px-5 ">
+              <hr className="border-dropdown-purple rounded-bottom" />
+              <div className="flex pb-4">
+                <div className="w-8/12 flex flex-col">
+                  <div className="flex justify-between text-xs pt-4 pb-4">
+                    <p className='text-right-side-color'>Latest case study</p>
+                    <p className="text-purple2">Read more</p>
+                  </div>
+                  <div className="h-full w-98 pb-4 relative overflow-hidden rounded-md">
+                  <img
+                    src="/assets/images/anthropic-cover.webp"
+                    alt="antrhropic cover"
+                    className="transition-transform duration-300 ease-in-out hover:scale-110"
+                  />
+                </div>
+                </div>
+                <div className="w-px bg-dropdown-purple mx-4" style={{ height: 'auto', minHeight: 'calc(100% - 2rem)', flexShrink: 0 }}></div>
+                <div className="w-4/12 flex flex-col items-start text-right-side-color text-xs">
+                  <div className="squared-underline">
+                    <p className="pt-4 pb-2">Other Use cases</p>
+                  </div>
+                  {useCases.map((useCase, index) => (
+                    <div key={index} className="flex items-center squared-underline pt-1">
+                      <img src={useCase.imgSrc} alt={useCase.alt} className="w-10 h-auto pl-1" />
+                      <p className='hover:text-white hover:cursor-pointer'>{useCase.text}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
       )}
 
-      <div className="bg-black flex items-center justify-center pt-20" id="heroSection">
-        <div className="relative w-full h-72 overflow-hidden z-0">
-          <video
-            src="/assets/videos/flow.mp4"
-            alt="Flow video showcasing SurgeAI features"
-            autoPlay
-            loop
-            muted
-            className="absolute top-1/2 left-1/2 w-auto h-full max-w-none transform -translate-x-1/2 -translate-y-1/2 scale-125 lg:scale-100"
-            loading="lazy"
-          />
-        </div>
-      </div>
-
-      {showHero && <Hero />}
+      <Hero />
     </div>
   );
 };

@@ -32,6 +32,7 @@ module.exports = {
         "purple3": "#1C0430",
         "dropdown-purple": "#28113B",
         "purple-text": "#7C6E88",
+        "right-side-color": "#A49BAC",
       },
       screens: {
         "wide": "1440px",
@@ -41,7 +42,9 @@ module.exports = {
       },
       padding: {
         "56": "224px", 
-        
+      },
+      width: {
+        "98": "392px",
       },
       keyframes: {
         scroll: {

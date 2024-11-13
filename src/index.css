@@ -127,3 +127,24 @@ nav {
 .rounded-bottom{
   border-radius: 0 0 15px 15px;
 }
+
+
+ .squared-underline {
+  position: relative;
+  display: inline-flex;  /* Flex konténer a szövegnek */
+  width: 100%;  /* Szélesség 100%-os legyen, hogy a vonal végigérjen */
+}
+
+.squared-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;  /* A vonal közvetlenül a szöveg alatt */
+  height: 0.6px;
+  background-image: linear-gradient(90deg, #453155 0.6px, transparent 0.6px);
+  background-size: 4px 0.6px;
+  background-repeat: repeat;
+}
+
+
