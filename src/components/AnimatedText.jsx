@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Cards from "./Cards";
 
 const GradientBackground = () => {
   const [opacity, setOpacity] = useState(0);
@@ -44,25 +45,27 @@ const GradientBackground = () => {
 
   return (
     <motion.div
-      className="w-full h-[100vh] flex flex-col items-center justify-start pt-48"
+      className="w-full flex flex-col items-center justify-start pt-48"
       style={{
         background: getBackgroundGradient(),
       }}
     >
       <motion.div
         id="textElement"
-        className="text-center text-baby-pink2 opacity-0 transition-opacity duration-300 ease-in-out"
+        className="pt-20 text-center text-baby-pink2 opacity-0 transition-opacity duration-300 ease-in-out"
         style={{
           opacity: opacity,
         }}
       >
         <p className="mb-2 text-xl lg:text-3xl">Surge AI's human data powers frontier models</p>
-        <div>
+        <div className="pb-96">
           <p className="text-lg lg:text-xl">from OpenAI, Anthropic, Google, Meta, xAI,</p>
           <p className="text-lg lg:text-xl">Mistral, and more.</p>
         </div>
       </motion.div>
+      <Cards/>
     </motion.div>
+
   );
 };
 

@@ -94,3 +94,18 @@ export const navLink = [
     }
   ];
   
+
+  export const imageUrls = [
+    "/assets/images/surgexopenai.webp",
+    "/assets/images/solvingMathWordProblems.webp",
+    "/assets/images/improvingLanguageModelBehavior.webp",
+    "/assets/images/scalableOversightForLargeLanguageModels.webp",
+    "/assets/images/constitutionalAi.webp", 
+    "/assets/images/discoveringLanguageModelBehaviors.webp", 
+    "/assets/images/benchmarkForGeneralAIAssistants.webp", 
+    "/assets/images/scalingInstruction.webp", 
+    "/assets/images/improvingLongStoryCoherence.webp", 
+    "/assets/images/learningToReason.webp", 
+    "/assets/images/enablingLargeLanguageModels.webp", 
+    "/assets/images/inverseScaling.webp", 
+  ]

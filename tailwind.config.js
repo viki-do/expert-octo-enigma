@@ -33,6 +33,7 @@ module.exports = {
         "dropdown-purple": "#28113B",
         "purple-text": "#7C6E88",
         "right-side-color": "#A49BAC",
+        "shadow-purple": "#55178F"
       },
       screens: {
         "wide": "1440px",
