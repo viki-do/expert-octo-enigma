@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Cards = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-4 px-36">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 p-4 px-16">
       {imageUrls.map((imageUrl, index) => (
         <Card key={index} imageUrl={imageUrl} index={index} />
       ))}
@@ -13,10 +13,8 @@ const Cards = () => {
 };
 
 const Card = ({ imageUrl, index }) => {
-  // State to store mouse X and Y positions (default to 0.5, 0.5 which is the center of the card)
   const [mousePosition, setMousePosition] = useState({ x: 0.5, y: 0.5 });
 
-  // Event handler to update mouse position
   const handleMouseMove = (e) => {
     const { left, top, width, height } = e.target.getBoundingClientRect();
     const x = (e.clientX - left) / width;
@@ -24,24 +22,28 @@ const Card = ({ imageUrl, index }) => {
     setMousePosition({ x, y });
   };
 
+  const handleMouseLeave = () => {
+    setMousePosition({ x: 0.5, y: 0.5 });
+  };
+
   return (
     <motion.div
-      className="group relative overflow-hidden rounded-xl transition-all cursor-pointer"
       onMouseMove={handleMouseMove}
-      style={{ perspective: '1000px' }} // Perspective distance for the 3D effect
+      onMouseLeave={handleMouseLeave}
+      style={{ perspective: '1000px' }}
+      className="group m-3 cursor-pointer pb-10"
     >
       <motion.div
-        // Default state: no tilt when the mouse is not moving
         style={{
           transform: `rotateY(${(mousePosition.x - 0.5) * 15}deg) rotateX(${(mousePosition.y - 0.5) * -15}deg)`,
-          transition: 'transform 0.1s ease-out', // Smooth transition for animation
-        }} 
-        className="w-full h-auto"
+          transition: 'transform 0.1s ease-out',
+        }}
+        className="w-full h-full rounded-xl overflow-hidden transition-transform transform hover:scale-105 hover:shadow-custom-purple"
       >
         <img
           src={imageUrl}
           alt={`image-${index + 1}`}
-          className="w-full h-auto object-cover transition-all rounded-xl"
+          className="w-full h-auto object-cover scale-105"
         />
       </motion.div>
     </motion.div>

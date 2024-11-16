@@ -26,14 +26,13 @@ module.exports = {
         "black": "#000000",
         "purple2": "#8200FF",
         "dark-gray": "#666666",
-        "purple": "#511881" ,
+        "purple": "#511881",
         "baby-pink": "#BEA8D1",
         "baby-pink2": "#E7CCFF",
         "purple3": "#1C0430",
         "dropdown-purple": "#28113B",
         "purple-text": "#7C6E88",
         "right-side-color": "#A49BAC",
-        "shadow-purple": "#55178F"
       },
       screens: {
         "wide": "1440px",
@@ -42,10 +41,17 @@ module.exports = {
         scroll: 'scroll 15s linear infinite',
       },
       padding: {
-        "56": "224px", 
+        "56": "224px",
       },
       width: {
         "98": "392px",
+      },
+      boxShadow: {
+        'custom-purple': `
+          0 10px 40px rgba(85, 23, 143, 0.8), 
+          0 40px 50px rgba(85, 23, 143, 0.6), 
+          0 40px 100px rgba(85, 23, 143, 0.4)
+        `,
       },
       keyframes: {
         scroll: {
@@ -56,4 +62,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};

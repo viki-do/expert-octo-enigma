@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Cards from "./Cards";
 
-const GradientBackground = () => {
+const AnimatedText = () => {
   const [opacity, setOpacity] = useState(0);
 
   useEffect(() => {
@@ -69,4 +69,4 @@ const GradientBackground = () => {
   );
 };
 
-export default GradientBackground;
+export default AnimatedText;
