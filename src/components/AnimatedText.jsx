@@ -57,10 +57,10 @@ const AnimatedText = () => {
           opacity: opacity,
         }}
       >
-        <p className="mb-2 text-xl lg:text-3xl">Surge AI's human data powers frontier models</p>
+        <p className="mb-2 text-3xl lg:text-3xl">Surge AI's human data powers frontier models</p>
         <div className="pb-96">
-          <p className="text-lg lg:text-xl">from OpenAI, Anthropic, Google, Meta, xAI,</p>
-          <p className="text-lg lg:text-xl">Mistral, and more.</p>
+          <p className="text-3xl lg:text-3xl">from OpenAI, Anthropic, Google, Meta, xAI,</p>
+          <p className="text-3xl lg:text-3xl">Mistral, and more.</p>
         </div>
       </motion.div>
       <Cards/>

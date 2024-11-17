@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Cards = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 p-4 px-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-1 p-4 px-2 lg:px-16 pb-20">
       {imageUrls.map((imageUrl, index) => (
         <Card key={index} imageUrl={imageUrl} index={index} />
       ))}
@@ -31,7 +31,7 @@ const Card = ({ imageUrl, index }) => {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ perspective: '1000px' }}
-      className="group m-3 cursor-pointer pb-10"
+      className="group m-3 cursor-pointer"
     >
       <motion.div
         style={{

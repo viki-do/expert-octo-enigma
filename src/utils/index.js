@@ -109,3 +109,64 @@ export const navLink = [
     "/assets/images/enablingLargeLanguageModels.webp", 
     "/assets/images/inverseScaling.webp", 
   ]
+
+  
+  export const slides = [
+    {
+      id: 0,
+      title: "GSM8K",
+      subtitle: "Dataset of 8,500 Math Problems",
+      image: "/assets/images/gsm8k.png", 
+      logo: "/assets/images/openailogo.png",
+    },
+    {
+      id: 1,
+      title: "Neeva",
+      subtitle: "Privacy-Focused Search Engine",
+      image: "/assets/images/anthropic-slider.webp", 
+      logo: "/assets/images/anthropic-logo.png",
+    },
+    {
+      id: 2,
+      title: "Stanford University",
+      subtitle: "Advancing AI Research",
+      image: "/assets/images/gaia.webp", 
+      logo: "/assets/images/meta.webp",
+    },
+    {
+      id: 3,
+      title: "Anthropic",
+      subtitle: "AI Safety and Alignment",
+      image: "/assets/images/measuring-homepage.png", 
+      logo: "/assets/images/instagram-logo.png",
+    },
+    {
+      id: 4,
+      title: "Meta",
+      subtitle: "Building the Metaverse",
+      image: "/assets/images/ai-content.webp", 
+      logo: "/assets/images/x-logo.jpeg",
+    },
+    {
+      id: 5,
+      title: "X",
+      subtitle: "Building the Metaverse",
+      image: "/assets/images/ai-software.webp",
+      logo: "/assets/images/github.png",
+    },
+
+    {
+      id: 6,
+      title: "neeva",
+      subtitle: "Building the Metaverse",
+      image: "/assets/images/search-quality.webp",
+      logo: "/assets/images/neeva.png",
+    },
+    {
+      id: 7,
+      title: "Mixing",
+      subtitle: "Building the Metaverse",
+      image: "/assets/images/mixing.webp",
+      logo: "/assets/images/stanford.webp",
+    },
+  ];

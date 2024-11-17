@@ -2,15 +2,18 @@ import React from 'react'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import AnimatedText from './components/AnimatedText'
-import { BrowserRouter as Router } from 'react-router-dom';
+import BestInTheIndustry from './components/BestInTheIndustry';
+
 
 const App = () => {
   return (
-    <Router>
+    <div>
       <Nav />
       <AnimatedText />
+      <BestInTheIndustry/>
       <Footer />
-    </Router>
+    </div>
+ 
   )
 }
 

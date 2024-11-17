@@ -22,7 +22,7 @@ module.exports = {
         'primary': "#ECEEFF",
         "coral-red": "#FF6452",
         "pale-blue": "#F5F6FF",
-        "white": "rgba(255, 255, 255)",
+        "white": "#FFFFFF",
         "black": "#000000",
         "purple2": "#8200FF",
         "dark-gray": "#666666",
@@ -33,6 +33,8 @@ module.exports = {
         "dropdown-purple": "#28113B",
         "purple-text": "#7C6E88",
         "right-side-color": "#A49BAC",
+        "dark-blue": "#000E2D",
+        "light-purple": "#F2E5FF",
       },
       screens: {
         "wide": "1440px",
@@ -49,8 +51,8 @@ module.exports = {
       boxShadow: {
         'custom-purple': `
           0 10px 40px rgba(85, 23, 143, 0.8), 
-          0 40px 50px rgba(85, 23, 143, 0.6), 
-          0 40px 100px rgba(85, 23, 143, 0.4)
+          0 20px 40px rgba(85, 23, 143, 0.6), 
+          0 30px 50px rgba(85, 23, 143, 0.4)
         `,
       },
       keyframes: {
