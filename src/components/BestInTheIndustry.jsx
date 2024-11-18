@@ -5,19 +5,18 @@ const BestInTheIndustry = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHoveredPrev, setIsHoveredPrev] = useState(false);
   const [isHoveredNext, setIsHoveredNext] = useState(false);
-  const [visibleCount, setVisibleCount] = useState(5); 
-  const [isHoveredSlider, setIsHoveredSlider] = useState(false); 
+  const [visibleCount, setVisibleCount] = useState(5);
+  const [isHoveredThumbnails, setIsHoveredThumbnails] = useState(false);
 
   useEffect(() => {
     const updateVisibleCount = () => {
       if (window.innerWidth >= 1024) {
         setVisibleCount(7);
       } else {
-        setVisibleCount(5); 
+        setVisibleCount(5);
       }
     };
 
-   
     window.addEventListener("resize", updateVisibleCount);
     updateVisibleCount();
 
@@ -57,17 +56,13 @@ const BestInTheIndustry = () => {
   };
 
   return (
-    <div className="bg-white flex flex-col justify-center items-center text-center pt-8">
+    <div className="bg-white flex flex-col justify-center items-center text-center pt-8 pb-10">
       <h1 className="text-4xl font-semibold text-dark-blue mb-8">
         Surge AI Powers <br />
         the Best in the Industry
       </h1>
 
-      <div
-        className="relative w-full max-w-6xl overflow-hidden mx-auto"
-        onMouseEnter={() => setIsHoveredSlider(true)} 
-        onMouseLeave={() => setIsHoveredSlider(false)}
-      >
+      <div className="relative w-full max-w-6xl overflow-hidden mx-auto">
         {/* Slider main container */}
         <div className="relative h-[270px] lg:h-[600px]">
           {slides.map((slide, index) => (
@@ -89,10 +84,36 @@ const BestInTheIndustry = () => {
             </div>
           ))}
         </div>
-        <div className="relative flex justify-between items-center w-full lg:max-w-7xl mx-auto mt-8">
+
+        {/* Thumbnails */}
+        <div
+          className="flex justify-center items-center w-full px-5 mt-6 relative"
+          onMouseEnter={() => setIsHoveredThumbnails(true)}
+          onMouseLeave={() => setIsHoveredThumbnails(false)}
+        >
+          {getVisibleThumbnails().map((index) => (
+            <button
+              key={slides[index].id}
+              onClick={() => setCurrentSlide(index)}
+              className={`rounded-md transition-transform transform ${
+                currentSlide === index
+                  ? "border-[1px] border-[#890EFF] shadow-[0_0_0_3px_#F2E5FF]"
+                  : ""
+              }`}
+              style={{ flex: "1", maxWidth: "150px" }}
+            >
+              <img
+                src={slides[index].logo}
+                alt={`${slides[index].title} logo`}
+                className="w-full h-full object-cover p-1 rounded-lg"
+              />
+            </button>
+          ))}
+
+          {/* Left navigation (large screens) */}
           <div
-            className={`absolute left-0 top-1/2 transform -translate-y-1/2 ${
-              isHoveredSlider || isHoveredPrev ? "block" : "hidden"
+            className={`absolute left-0 transform -translate-y-1/2 top-1/2 hidden lg:block ${
+              isHoveredThumbnails || isHoveredPrev ? "block" : "hidden"
             }`}
           >
             <button
@@ -109,30 +130,10 @@ const BestInTheIndustry = () => {
             </button>
           </div>
 
-          {/* Thumbnails */}
-          <div className="flex justify-center items-center w-full px-5">
-            {getVisibleThumbnails().map((index) => (
-              <button
-                key={slides[index].id}
-                onClick={() => setCurrentSlide(index)}
-                className={`rounded-md transition-transform transform  ${
-                  currentSlide === index
-                    ? "border-[1px] border-[#890EFF] shadow-[0_0_0_3px_#F2E5FF]"
-                    : ""
-                }`}
-                style={{ flex: "1", maxWidth: "150px" }}
-              >
-                <img
-                  src={slides[index].logo}
-                  alt={`${slides[index].title} logo`}
-                  className="w-full h-full object-cover p-1 rounded-lg"
-                />
-              </button>
-            ))}
-          </div>
+          {/* Right navigation (large screens) */}
           <div
-            className={`absolute right-0 top-1/2 transform -translate-y-1/2 ${
-              isHoveredSlider || isHoveredNext ? "block" : "hidden"
+            className={`absolute right-0 transform -translate-y-1/2 top-1/2 hidden lg:block ${
+              isHoveredThumbnails || isHoveredNext ? "block" : "hidden"
             }`}
           >
             <button
@@ -149,32 +150,32 @@ const BestInTheIndustry = () => {
             </button>
           </div>
         </div>
-      </div>
-      <div className="flex lg:hidden justify-center gap-3 items-center pt-5">
-        <button
-          onClick={handlePrev}
-          onMouseEnter={() => setIsHoveredPrev(true)}
-          onMouseLeave={() => setIsHoveredPrev(false)}
-          className="bg-white py-5 px-5 rounded-full border border-gray-200 focus:outline-none hover:bg-[#890EFF] hover:text-white"
-        >
-          {isHoveredPrev ? (
-            <img src="/assets/icons/arrowLeftWhite.svg" alt="Left" />
-          ) : (
-            <img src="/assets/icons/arrowLeft.svg" alt="Left" />
-          )}
-        </button>
-        <button
-          onClick={handleNext}
-          onMouseEnter={() => setIsHoveredNext(true)}
-          onMouseLeave={() => setIsHoveredNext(false)}
-          className="bg-white py-5 px-5 rounded-full border border-gray-200 focus:outline-none hover:bg-[#890EFF] hover:text-white"
-        >
-          {isHoveredNext ? (
-            <img src="/assets/icons/arrowRightWhite.svg" alt="Right" />
-          ) : (
-            <img src="/assets/icons/arrowRight.svg" alt="Right" />
-          )}
-        </button>
+
+        {/* Navigation for smaller screens */}
+        <div className="flex lg:hidden justify-center gap-3 items-center mt-4">
+          <button
+            onClick={handlePrev}
+            onMouseEnter={() => setIsHoveredPrev(true)}
+            onMouseLeave={() => setIsHoveredPrev(false)}
+            className="bg-white py-5 px-5 rounded-full border border-gray-200 focus:outline-none hover:bg-[#890EFF] hover:text-white"
+          >
+            <img
+              src={isHoveredPrev ? "/assets/icons/arrowLeftWhite.svg" : "/assets/icons/arrowLeft.svg"}
+              alt="Left"
+            />
+          </button>
+          <button
+            onClick={handleNext}
+            onMouseEnter={() => setIsHoveredNext(true)}
+            onMouseLeave={() => setIsHoveredNext(false)}
+            className="bg-white py-5 px-5 rounded-full border border-gray-200 focus:outline-none hover:bg-[#890EFF] hover:text-white"
+          >
+            <img
+              src={isHoveredNext ? "/assets/icons/arrowRightWhite.svg" : "/assets/icons/arrowRight.svg"}
+              alt="Right"
+            />
+          </button>
+        </div>
       </div>
     </div>
   );
