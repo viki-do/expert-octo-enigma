@@ -35,6 +35,8 @@ module.exports = {
         "right-side-color": "#A49BAC",
         "dark-blue": "#000E2D",
         "light-purple": "#F2E5FF",
+        "frontier-models": "#19012E",
+        "frontier-models-color": "#E7CCFF"
       },
       screens: {
         "wide": "1440px",

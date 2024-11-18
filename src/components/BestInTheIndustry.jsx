@@ -56,34 +56,35 @@ const BestInTheIndustry = () => {
   };
 
   return (
-    <div className="bg-white flex flex-col justify-center items-center text-center pt-8 pb-10">
+    <div className="bg-white flex flex-col justify-center items-center text-center">
+      <img src="/assets/images/blur.jpg" alt="" />
       <h1 className="text-4xl font-semibold text-dark-blue mb-8">
         Surge AI Powers <br />
         the Best in the Industry
       </h1>
 
       <div className="relative w-full max-w-6xl overflow-hidden mx-auto">
-        {/* Slider main container */}
-        <div className="relative h-[270px] lg:h-[600px]">
-          {slides.map((slide, index) => (
-            <div
-              key={slide.id}
-              className={`absolute left-1/2 transform -translate-x-1/2 transition-all duration-500 ease-in-out ${getSlidePosition(
-                index
-              )}`}
-              style={{ width: "90%" }}
-            >
-              <div className="relative aspect-[16/9] overflow-hidden rounded-2xl shadow-lg">
-                <div
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url(${slide.image})`,
-                  }}
-                />
-              </div>
-            </div>
-          ))}
+  {/* Slider main container */}
+  <div className="relative h-[270px] lg:h-[600px]">
+    {slides.map((slide, index) => (
+      <div
+        key={slide.id}
+        className={`absolute left-1/2 transform -translate-x-1/2 transition-all duration-500 ease-in-out ${getSlidePosition(
+          index
+        )}`}
+        style={{ width: "90%" }}
+      >
+        <div className="relative aspect-[16/9] overflow-hidden rounded-2xl shadow-lg">
+          {/* A KÉP HOZZÁADÁSA AZ IMG-ELEMHEZ */}
+          <img
+            src={slide.image}
+            alt={slide.title}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+          />
         </div>
+      </div>
+    ))}
+  </div>
 
         {/* Thumbnails */}
         <div

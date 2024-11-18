@@ -185,7 +185,7 @@ const Nav = ({ setShowAnimatedText }) => {
                 <div className="w-8/12 flex flex-col">
                   <div className="flex justify-between text-xs pt-4 pb-4">
                     <p className='text-right-side-color'>Latest case study</p>
-                    <p className="text-purple2">Read more</p>
+                    <p className="text-purple2 hover:text-white cursor-pointer">Read more</p>
                   </div>
                   <div className="h-full w-98 pb-4 relative overflow-hidden rounded-md">
                   <img
