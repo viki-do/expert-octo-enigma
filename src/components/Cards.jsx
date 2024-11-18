@@ -38,7 +38,7 @@ const Card = ({ imageUrl, index }) => {
           transform: `rotateY(${(mousePosition.x - 0.5) * 15}deg) rotateX(${(mousePosition.y - 0.5) * -15}deg)`,
           transition: 'transform 0.1s ease-out',
         }}
-        className="w-full h-full rounded-xl overflow-hidden transition-transform transform hover:scale-105 hover:shadow-custom-purple"
+        className="w-full h-full rounded-3xl overflow-hidden transition-transform transform hover:scale-105 hover:shadow-custom-purple"
       >
         <img
           src={imageUrl}
