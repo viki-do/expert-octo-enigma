@@ -23,10 +23,10 @@ const PoweringFrontierModels = () => {
             }}
           >
             <div className="flex flex-col relative w-full">
-              <p className="text-white absolute bottom-9 right-2">001</p>
-              <div className="flex items-center justify-center space-x-3">
+              <p className="text-white absolute bottom-9 right-2 lg:bottom-16 lg:right-4">001</p>
+              <div className="flex pl-4 lg:pl-10 lg:gap-12">
                 <img src="/assets/icons/claude.png" alt="" className="h-7 lg:h-12" />
-                <p className="text-white text-center">
+                <p className="text-white pt-1 lg:pt-4 lg:text-lg font-semibold">
                   Surge AI's RLHF platform for Anthropic
                 </p>
               </div>
