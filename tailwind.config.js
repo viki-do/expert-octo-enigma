@@ -24,7 +24,6 @@ module.exports = {
         "pale-blue": "#F5F6FF",
         "white": "#FFFFFF",
         "black": "#000000",
-        "purple2": "#8200FF",
         "dark-gray": "#666666",
         "purple": "#511881",
         "baby-pink": "#BEA8D1",
@@ -46,6 +45,7 @@ module.exports = {
       },
       padding: {
         "56": "224px",
+        "140": "560px",
       },
       width: {
         "98": "392px",

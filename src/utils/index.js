@@ -170,3 +170,26 @@ export const navLink = [
       logo: "/assets/images/stanford.webp",
     },
   ];
+
+  export const frontierModelCards = [
+    {
+      id: 1,
+      logo: "/assets/icons/claude.png",
+      title: "Surge AI's RLHF platform for Anthropic",
+    },
+    {
+      id: 2,
+      logo: "/assets/icons/gemini.png",
+      title: "Scaling Instruction-Finetuned Language Models",
+    },
+    {
+      id: 3,
+      logo: "/assets/icons/chat-gpt.png",
+      title: "Surge AI Built OpeanAI's GSM8K Dataset",
+    },
+    {
+      id: 4,
+      logo: "/assets/icons/lLama.png",
+      title: "A Benchmark for General AI Assitants",
+    },
+  ];

@@ -131,11 +131,11 @@ const Nav = ({ setShowAnimatedText }) => {
               ))}
             <a
               href="getStarted"
-              className="relative inline-flex items-center px-4 py-2 ml-4 rounded-full bg-transparent border border-dark-gray transition-all duration-500 hover:bg-purple2 hover:border-transparent hover:text-white text-sm"
+              className="relative inline-flex items-center px-4 py-2 ml-4 rounded-full bg-transparent border border-dark-gray transition-all duration-500 hover:bg-[#8200FF] hover:border-transparent hover:text-white text-sm"
               aria-label="Get Started"
             >
               Get Started
-              <span className="ml-2 flex items-center justify-center w-6 h-6 rounded-full bg-purple2 transition-all duration-500 hover:bg-white hover:text-purple2">
+              <span className="ml-2 flex items-center justify-center w-6 h-6 rounded-full bg-[#8200FF] transition-all duration-500 hover:bg-white hover:text-[#8200FF]">
                 <span className="flex items-center justify-center h-full w-full">
                   <FontAwesomeIcon icon={faArrowRight} style={{ color: "#ffffff" }} />
                 </span>
