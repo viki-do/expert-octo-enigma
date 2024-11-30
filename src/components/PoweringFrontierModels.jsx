@@ -13,14 +13,14 @@ const PoweringFrontierModels = () => {
   };
 
   return (
-    <div className="relative w-full bg-frontier-models pb-40 pt-140">
+    <div className="relative w-full bg-frontier-models pb-20 ">
       <img
         src="/assets/images/frontier-model-bg.jpg"
         alt="Background"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full"
       />
-      <div className="relative z-10 flex flex-col justify-center items-center">
-        <p className="text-frontier-models-color text-4xl font-medium text-center translate-y-44 pb-96">
+      <div className="relative z-10 flex flex-col justify-center items-center pt-48">
+        <p className="text-frontier-models-color text-5xl font-medium text-center translate-y-36 pb-64">
           Powering Frontier <br /> Models
         </p>
       </div>

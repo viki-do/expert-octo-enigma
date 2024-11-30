@@ -64,27 +64,26 @@ const BestInTheIndustry = () => {
       </h1>
 
       <div className="relative w-full max-w-6xl overflow-hidden mx-auto">
-  {/* Slider main container */}
-  <div className="relative h-[270px] lg:h-[600px]">
-    {slides.map((slide, index) => (
-      <div
-        key={slide.id}
-        className={`absolute left-1/2 transform -translate-x-1/2 transition-all duration-500 ease-in-out ${getSlidePosition(
-          index
-        )}`}
-        style={{ width: "90%" }}
-      >
-        <div className="relative aspect-[16/9] overflow-hidden rounded-2xl shadow-lg">
-          {/* A KÉP HOZZÁADÁSA AZ IMG-ELEMHEZ */}
-          <img
-            src={slide.image}
-            alt={slide.title}
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
-          />
+        {/* Slider main container */}
+        <div className="relative h-[270px] lg:h-[600px]">
+          {slides.map((slide, index) => (
+            <div
+              key={slide.id}
+              className={`absolute left-1/2 transform -translate-x-1/2 transition-all duration-500 ease-in-out ${getSlidePosition(
+                index
+              )}`}
+              style={{ width: "90%" }}
+            >
+              <div className="relative aspect-[16/9] overflow-hidden rounded-2xl shadow-lg">
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+                />
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-    ))}
-  </div>
 
         {/* Thumbnails */}
         <div
