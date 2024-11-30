@@ -9,13 +9,13 @@ const CompanySlider = () => {
   const sliderRef = useRef(null);
 
   useEffect(() => {
-    // Fade-out animation for the CompanySlider on scroll
+    
     gsap.to(sliderRef.current, {
-      opacity: 0, // Fade to invisible
+      opacity: 0, 
       scrollTrigger: {
         trigger: sliderRef.current,
-        start: "top center", // Adjust this position based on when you'd like the fade to start
-        end: "bottom top", // Adjust to control when it's fully faded out
+        start: "top center", 
+        end: "bottom top", 
         scrub: true,
       },
     });

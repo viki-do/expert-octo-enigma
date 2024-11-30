@@ -1,20 +1,20 @@
 
 export const logos = [
-    { logo: '/assets/images/openAI.png' },
-    { logo: '/assets/images/anth.png' },
-    { logo: '/assets/images/meta.png' },
-    { logo: '/assets/images/google.png' },
-    { logo: '/assets/images/deepMind.png' },
-    { logo: '/assets/images/microsoft.png' },
-    { logo: '/assets/images/amazon.png' },
-    { logo: '/assets/images/mistralAI.png' },
-    { logo: '/assets/images/x.png' },
-    { logo: '/assets/images/nvidia.png' },
-    { logo: '/assets/images/characterAI.png' },
-    { logo: '/assets/images/adept.png' },
-    { logo: '/assets/images/cohere.png' },
-    { logo: '/assets/images/ai2.png' },
-    { logo: '/assets/images/huggingFace.png' },
+    { logo: '/assets/icons/openAI.png' },
+    { logo: '/assets/icons/anth.png' },
+    { logo: '/assets/icons/meta.png' },
+    { logo: '/assets/icons/google.png' },
+    { logo: '/assets/icons/deepMind.png' },
+    { logo: '/assets/icons/microsoft.png' },
+    { logo: '/assets/icons/amazon.png' },
+    { logo: '/assets/icons/mistralAI.png' },
+    { logo: '/assets/icons/x.png' },
+    { logo: '/assets/icons/nvidia.png' },
+    { logo: '/assets/icons/characterAI.png' },
+    { logo: '/assets/icons/adept.png' },
+    { logo: '/assets/icons/cohere.png' },
+    { logo: '/assets/icons/ai2.png' },
+    { logo: '/assets/icons/huggingFace.png' },
 ];
 
 export const bannerText =[
@@ -193,3 +193,154 @@ export const navLink = [
       title: "A Benchmark for General AI Assitants",
     },
   ];
+
+   export const logoSlider1 = [
+    {
+      name: "Microsoft",
+      image: "/assets/icons/microsoft-svg.svg",
+    },
+    {
+      name: "Nvidia",
+      image: "/assets/icons/nvidia-svg.svg",
+    },
+    {
+      name: "NYU",
+      image: "/assets/icons/nyu-svg.svg",
+    },
+    {
+      name: "Substack",
+      image: "/assets/icons/substack-svg.svg",
+    },
+    {
+      name: "Google",
+      image: "/assets/icons/google-svg.svg",
+    },
+    {
+      name: "Primer",
+      image: "/assets/icons/primer-svg.svg",
+    },
+    {
+      name: "Amazon",
+      image: "/assets/icons/amazon-svg.svg",
+    },
+    {
+      name: "Hugging Face",
+      image: "/assets/icons/huggingFace-svg.svg",
+    },
+    {
+      name: "Twitch",
+      image: "/assets/icons/twitch-svg.svg",
+    },
+  ]
+
+  export const logoSlider2 = [
+    {
+      name: "Zip Recruiter",
+      image: "/assets/icons/zip-recruiter-svg.svg",
+    },
+    {
+      name: "X",
+      image: "/assets/icons/x-svg.svg",
+    },
+    {
+      name: "Anthropic",
+      image: "/assets/icons/anthropic-svg.svg",
+    },
+    {
+      name: "Expedia",
+      image: "/assets/icons/expedia-svg.svg",
+    },
+    {
+      name: "Neeva",
+      image: "/assets/icons/neeva-svg.svg",
+    },
+    {
+      name: "The Moonshot Factory",
+      image: "/assets/icons/theMoonshotFactory-svg.svg",
+    },
+    {
+      name: "You",
+      image: "/assets/icons/you-svg.svg",
+    },
+    {
+      name: "Cohere",
+      image: "/assets/icons/cohere-svg.svg",
+    },
+    {
+      name: "Adept",
+      image: "/assets/icons/adept-svg.svg",
+    },
+  ]
+  export const logoSlider3 = [
+    {
+      name: "Ought",
+      image: "/assets/icons/ought-svg.svg",
+    },
+    {
+      name: "Spectrum Labs",
+      image: "/assets/icons/spectrumLabs-svg.svg",
+    },
+    {
+      name: "Redwood Research",
+      image: "/assets/icons/redwood-research-svg.svg",
+    },
+    {
+      name: "Ntropy",
+      image: "/assets/icons/ntropy-svg.svg",
+    },
+    {
+      name: "Allen Instuitute for AI",
+      image: "/assets/icons/allenInstituteForAI-svg.svg",
+    },
+    {
+      name: "Trust Lab",
+      image: "/assets/icons/trustLab-svg.svg",
+    },
+    {
+      name: "University of Cambridge",
+      image: "/assets/icons/universityOfCambridge-svg.svg",
+    },
+    {
+      name: "Berkeley UOC",
+      image: "/assets/icons/berkeleyUOC-svg.svg",
+    },
+    {
+      name: "Stanford University",
+      image: "/assets/icons/stanfordUniversity-svg.svg",
+    },
+  ]
+
+  export const logoSlider4 = [
+    {
+      name: "Brown",
+      image: "/assets/icons/brown-svg.svg",
+    },
+    {
+      name: "Pomona College",
+      image: "/assets/icons/pomonaCollege-svg.svg",
+    },
+    {
+      name: "Mistral AI",
+      image: "/assets/icons/mistralAI-svg.svg",
+    },
+    {
+      name: "Emory University",
+      image: "/assets/icons/emoryUniversity-svg.svg",
+    },
+    {
+      name: "Character.ai",
+      image: "/assets/icons/characterAI-svg.svg",
+    },
+    {
+      name: "U.S Air Force",
+      image: "/assets/icons/usAirForce-svg.svg",
+    },
+    {
+      name: "Columbia",
+      image: "/assets/icons/columbia-svg.svg",
+    },
+    {
+      name: "U.S Army",
+      image: "/assets/icons/usArmy-svg.png",
+    },
+  ]

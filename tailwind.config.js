@@ -42,6 +42,24 @@ module.exports = {
       },
       animation: {
         scroll: 'scroll 15s linear infinite',
+        scrollSeamless: "scrollSeamless 12s linear infinite",
+        scrollSeamlessReverse: "scrollSeamlessReverse 12s linear infinite",
+
+      },
+      keyframes: {
+        scroll: {
+          '100%': { transform: 'translateX(0)' },
+          '0%': { transform: 'translateX(-100%)' },
+        },
+        scrollSeamless: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        scrollSeamlessReverse: {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+
       },
       padding: {
         "56": "224px",
@@ -56,12 +74,6 @@ module.exports = {
           0 20px 40px rgba(85, 23, 143, 0.6), 
           0 30px 50px rgba(85, 23, 143, 0.4)
         `,
-      },
-      keyframes: {
-        scroll: {
-          '100%': { transform: 'translateX(0)' },
-          '0%': { transform: 'translateX(-100%)' },
-        },
       },
     },
   },

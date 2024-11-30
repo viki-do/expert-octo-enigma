@@ -4,6 +4,7 @@ import Nav from './components/Nav'
 import AnimatedText from './components/AnimatedText'
 import BestInTheIndustry from './components/BestInTheIndustry';
 import PoweringFrontierModels from './components/PoweringFrontierModels';
+import TrustedByLeadingCompanies from './components/TrustedByLeadingCompanies';
 
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
       <AnimatedText />
       <BestInTheIndustry/>
       <PoweringFrontierModels/>
+      <TrustedByLeadingCompanies />  
       {/* <Footer /> */}
     </div>
  

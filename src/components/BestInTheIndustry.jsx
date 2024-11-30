@@ -109,8 +109,6 @@ const BestInTheIndustry = () => {
               />
             </button>
           ))}
-
-          {/* Left navigation (large screens) */}
           <div
             className={`absolute left-0 transform -translate-y-1/2 top-1/2 hidden lg:block ${
               isHoveredThumbnails || isHoveredPrev ? "block" : "hidden"
@@ -129,8 +127,6 @@ const BestInTheIndustry = () => {
               )}
             </button>
           </div>
-
-          {/* Right navigation (large screens) */}
           <div
             className={`absolute right-0 transform -translate-y-1/2 top-1/2 hidden lg:block ${
               isHoveredThumbnails || isHoveredNext ? "block" : "hidden"
@@ -150,8 +146,6 @@ const BestInTheIndustry = () => {
             </button>
           </div>
         </div>
-
-        {/* Navigation for smaller screens */}
         <div className="flex lg:hidden justify-center gap-3 items-center mt-4">
           <button
             onClick={handlePrev}
