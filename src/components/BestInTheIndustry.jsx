@@ -56,7 +56,7 @@ const BestInTheIndustry = () => {
   };
 
   return (
-    <div className="bg-white flex flex-col justify-center items-center text-center">
+    <div className="bg-white flex flex-col justify-center items-center text-center pb-28">
       <img src="/assets/images/blur.jpg" alt="" />
       <h1 className="text-4xl font-semibold text-dark-blue mb-8">
         Surge AI Powers <br />

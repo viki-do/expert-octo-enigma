@@ -19,8 +19,8 @@ const PoweringFrontierModels = () => {
         alt="Background"
         className="absolute inset-0 w-full"
       />
-      <div className="relative z-10 flex flex-col justify-center items-center pt-24 lg:pt-40">
-        <p className="text-frontier-models-color lg:text-5xl lg:font-semibold text-4xl font-medium text-center lg:translate-y-36 pb-52 lg:pb-56">
+      <div className="relative z-10 flex flex-col justify-center items-center pt-64 lg:pt-40">
+        <p className="text-frontier-models-color lg:text-5xl lg:font-semibold text-4xl font-medium text-center lg:translate-y-36 pb-16 lg:pb-56">
           Powering Frontier <br /> Models
         </p>
       </div>

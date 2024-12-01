@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 
+
+
 * {
   margin: 0;
   padding: 0;
@@ -171,3 +173,4 @@ nav {
 .flex-shrink-0 {
   min-width: fit-content;
 }
+

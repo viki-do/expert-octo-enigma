@@ -1,7 +1,6 @@
 import React from 'react';
 import { logoSlider1, logoSlider2, logoSlider3, logoSlider4 } from '../utils';
 
-// Reusable LogoSlider Component
 const LogoSlider = ({ logos, animationClass }) => {
   return (
     <div className="flex overflow-hidden relative lg:pb-2 pb-3">

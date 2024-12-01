@@ -35,15 +35,15 @@ module.exports = {
         "dark-blue": "#000E2D",
         "light-purple": "#F2E5FF",
         "frontier-models": "#19012E",
-        "frontier-models-color": "#E7CCFF"
+        "frontier-models-color": "#E7CCFF",
       },
       screens: {
         "wide": "1440px",
       },
       animation: {
         scroll: 'scroll 15s linear infinite',
-        scrollSeamless: "scrollSeamless 12s linear infinite",
-        scrollSeamlessReverse: "scrollSeamlessReverse 12s linear infinite",
+        scrollSeamless: "scrollSeamless 15s linear infinite",
+        scrollSeamlessReverse: "scrollSeamlessReverse 15s linear infinite",
 
       },
       keyframes: {

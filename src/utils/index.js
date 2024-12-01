@@ -344,3 +344,43 @@ export const navLink = [
       image: "/assets/icons/usArmy-svg.png",
     },
   ]
+
+  export const enterpriseScaleAndSecurity = [
+    {
+      image: "/assets/icons/security.svg",
+      alt: "SOC II",
+      title: "SOC II",
+      description: "Private, secure, and trusted by the largest AI enterprises."
+    },
+    {
+      image: "/assets/icons/api.svg",
+      alt: "API & SDK",
+      title: "API & SDK",
+      description: "Integrate directly with our native APIs."
+    },
+    {
+      image: "/assets/icons/global-support.svg",
+      alt: "24/7 Global Support",
+      title: "24/7 Global Support",
+      description: "Leverage first-class tools and an elite workforce together."
+    },
+    {
+      image: "/assets/icons/managed-service.svg",
+      alt: "Managed Service",
+      title: "Managed Service",
+      description: "Our expert data team partners with you every step of the way."
+    },
+  ];
+
+  export const ScaleAndSecuritySlider = [ 
+    { logo: '/assets/icons/openAI.png' },
+    { logo: '/assets/icons/anth.png' },
+    { logo: '/assets/icons/expediaSlider.png' },
+    { logo: '/assets/icons/usArmySlider.png' },
+    { logo: '/assets/icons/google.png' },
+    { logo: '/assets/icons/nvidiaSlider.png' },
+    { logo: '/assets/icons/xSlider.png' },
+    { logo: '/assets/icons/microsoft.png' },
+    { logo: '/assets/icons/amazon.png' },
+  
+  ]

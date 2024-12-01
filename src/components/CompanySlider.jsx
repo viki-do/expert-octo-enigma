@@ -22,7 +22,7 @@ const CompanySlider = () => {
   }, []);
 
   return (
-    <div ref={sliderRef} className="relative overflow-hidden w-full h-[60px] bg-black shadow-lg">
+    <div ref={sliderRef} className="relative overflow-hidden w-full h-[60px] bg-transparent shadow-lg">
       <div className="flex animate-scroll sm:animate-[scroll_25s_linear_infinite] lg:animate-[scroll_25s_linear_infinite]">
         {logos.map((logo, index) => (
           <div key={index} className="flex-shrink-0 mr-8">
