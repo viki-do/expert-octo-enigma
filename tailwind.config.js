@@ -16,6 +16,7 @@ module.exports = {
       '6xl': ['64px', '70px'],
       '7xl': ['72px', '84px'],
       '8xl': ['96px', '106px'],
+      '3xl2': ['47px', '47px'],
     },
     extend: {
       colors: {
@@ -66,7 +67,12 @@ module.exports = {
         "140": "560px",
       },
       width: {
-        "98": "392px",
+        "99": "396px",
+      },
+      height: {
+        "115": "460px",
+        "37": "148px",
+        "87": "348px",
       },
       boxShadow: {
         'custom-purple': `

@@ -4,7 +4,7 @@ import CompanySlider2 from './CompanySlider2';
 
 const EnterpriseScaleAndSecurity = () => {
   return (
-    <div className='flex flex-col bg-[#18002D] text-center pt-20 lg:pt-32 lg:pb-10'>
+    <div className='flex flex-col bg-[#18002D] text-center pt-20 lg:pt-32 lg:pb-10 pb-16'>
       <p className='text-3xl font-semibold pb-10 text-white lg:text-2xl lg:pb-20'>
         <span className='block sm:inline'>Enterprise Scale</span>
         <span className='block sm:inline'> and Security</span>

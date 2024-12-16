@@ -32,14 +32,14 @@ const CompanySlider = () => {
 
     gsap.to(container, {
       x: `-${totalWidth / 2}`,
-      duration: 20,
+      duration: 25,
       repeat: -1,
       ease: 'linear',
     });
   }, [repeatedLogos]);
 
   return (
-    <div className="relative overflow-hidden w-full h-[60px] bg-transparent shadow-lg">
+    <div className="relative overflow-hidden w-full h-[60px] bg-transparent">
       <div ref={sliderRef} className="flex w-max">
         {repeatedLogos.map((logo, index) => (
           <div key={index} className="flex-shrink-0 mr-8">
