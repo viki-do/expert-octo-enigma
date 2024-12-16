@@ -50,14 +50,14 @@ const Hero = () => {
   return (
     <div className="w-full bg-black relative overflow-hidden pb-0">
       <div className="bg-black flex items-center justify-center pt-20" id="heroSection">
-        <div className="relative w-full h-72 overflow-hidden z-0">
+        <div className="relative w-full h-[calc(40vh-80px)] overflow-hidden z-0">
           <video
             src="/assets/videos/flow.mp4"
             alt="Flow video showcasing SurgeAI features"
             autoPlay
             loop
             muted
-            className="absolute top-1/2 left-1/2 w-auto h-full max-w-none transform -translate-x-1/2 -translate-y-1/2 scale-125 lg:scale-100"
+            className="absolute top-0 left-0 w-full h-full object-cover"
             loading="lazy"
           />
         </div>

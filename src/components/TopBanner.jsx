@@ -72,7 +72,7 @@ export const TopBanner = () => {
 
   return (
     <div
-      className="banner-wrapper bg-purple h-14 pt-4 lg:h-12 overflow-hidden" 
+      className="banner-wrapper bg-purple h-14 pt-4 lg:h-10 lg:pt-[10px] overflow-hidden" 
       ref={containerRef}
       onMouseEnter={() => setIsHovered(true)} 
       onMouseLeave={() => setIsHovered(false)} 

@@ -32,7 +32,7 @@ const NewsAndUpdate = () => {
 
   return (
     <div>
-      <div className="bg-[#ECECEC]  pt-20 flex flex-col pl-5 lg:pl-60 lg:pb-28">
+      <div className="bg-[#ECECEC]  pt-20 flex flex-col pl-5 lg:pl-32 lg:pb-28 ">
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-center mb-14">
           {/* Cím rész */}
           <div>
@@ -73,7 +73,7 @@ const NewsAndUpdate = () => {
         {/* Kártyák */}
         <div className="relative overflow-hidden w-full">
           <div
-            className="flex transition-transform duration-300 lg:w-[410px] gap-6 lg:gap-5"
+            className="flex transition-transform duration-300 lg:w-[340px] gap-6 lg:gap-5"
             style={{
               transform: `translateX(-${currentIndex * 90}%)`,
               paddingLeft: "2px",
@@ -89,14 +89,14 @@ const NewsAndUpdate = () => {
                 }}
               >
                 {/* Kép konténer */}
-                <div className=" overflow-hidden rounded-xl h-36 w-[256px] lg:w-48 lg:h-28 lg:overflow-hidden">
+                <div className=" overflow-hidden rounded-xl h-36 w-[256px] lg:w-40 lg:h-[92px] lg:overflow-hidden">
                   <img
                     src={card.img}
                     alt=""
                     className="object-cover w-full h-full rounded-xl"
                   />
                 </div>
-                <p className="text-xl font-medium pt-36 pr-2 lg:pt-20 lg:text-md hover:text-[#8200FF]">
+                <p className="text-xl font-semibold pt-36 pr-2 lg:pt-20 lg:text-base hover:text-[#8200FF]">
                   {card.text}
                 </p>
               </div>
