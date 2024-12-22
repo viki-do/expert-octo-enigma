@@ -17,7 +17,8 @@ module.exports = {
       '6xl': ['64px', '70px'],
       '7xl': ['72px', '84px'],
       '8xl': ['96px', '106px'],
-      '3xl2': ['47px', '47px'],
+      '3xl2': ['46px', '46px'],
+      'lg2': ['22px', '22px'],
     },
     extend: {
       colors: {
