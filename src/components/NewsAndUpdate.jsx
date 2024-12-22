@@ -37,7 +37,7 @@ const NewsAndUpdate = () => {
           {/* Cím rész */}
           <div>
             <p className="text-[#8E94A0] text-xl pb-3 lg:text-md">Surge AI blog</p>
-            <p className="text-4xl font-semibold text-[#2F2F2F] lg:text-5xl">News and Updates</p>
+            <p className="text-3xl2 font-semibold text-[#2F2F2F] lg:text-5xl">News and Updates</p>
           </div>
 
           {/* Gombok nagy kijelzőre igazítva */}
@@ -105,7 +105,7 @@ const NewsAndUpdate = () => {
         </div>
 
         {/* Gombok kis kijelzőre középre igazítva */}
-        <div className="flex lg:hidden justify-center space-x-4 mt-5">
+        <div className="flex lg:hidden justify-center space-x-4 mt-10 mb-20">
           <button
             onClick={handlePrev}
             disabled={currentIndex === 0}
