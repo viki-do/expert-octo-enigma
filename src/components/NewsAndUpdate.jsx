@@ -32,7 +32,7 @@ const NewsAndUpdate = () => {
 
   return (
     <div>
-      <div className="bg-[#ECECEC]  pt-20 flex flex-col pl-5 lg:pl-32 lg:pb-28 ">
+      <div className="bg-[#ECECEC]  pt-20 flex flex-col pl-5 lg:pl-32 lg:pb-28">
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-center mb-14">
           {/* Cím rész */}
           <div>
