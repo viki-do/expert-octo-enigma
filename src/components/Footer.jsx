@@ -108,39 +108,129 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col lg:w-full mt-20">
-          <div className="lg:flex text-white">
-            <div className="flex flex-col lg:mr-10 lg:w-[400px] pb-5">
-              <h3 className="text-2xl pb-7">Case Studies</h3>
-              <p>Adversarial Data Labeling</p>
-              <p>Content Moderation</p>
-              <p>Search Ranking</p>
-              <p>Reinforcement Learning with Human Feedback</p>
-              <p>Training Next-Gen Command LLM</p>
+            <div className="lg:flex text-white">
+              <div className="flex flex-col lg:mr-10 lg:w-[400px] pb-5">
+                <div className="flex flex-row justify-between items-end pb-6">
+                  <h3 className="text-2xl font-medium text-white">Case Studies</h3>
+                  <img
+                    src="/assets/icons/arrowDown.svg"
+                    alt=""
+                    height={36}
+                    width={36}
+                    className="lg:hidden"
+                  />
+                </div>
+                <div className="group items-center cursor-pointer hidden sm:flex">
+                  <div className="w-3 h-3 rounded-full border-[1px] border-[#9747FF] group-hover:bg-[#9747FF]" />
+                  <p className="text-[#716083] group-hover:text-white">Adversarial Data Labeling</p>
+                </div>
+                <div className="group items-center cursor-pointer hidden sm:flex">
+                  <div className="w-3 h-3 rounded-full border-[1px] border-[#9747FF] group-hover:bg-[#9747FF]" />
+                  <p className="text-[#716083] group-hover:text-white">Content Moderation</p>
+                </div>
+                <div className="group items-center cursor-pointer hidden sm:flex">
+                  <div className="w-3 h-3 rounded-full border-[1px] border-[#9747FF] group-hover:bg-[#9747FF]" />
+                  <p className="text-[#716083] group-hover:text-white">Search Ranking</p>
+                </div>
+                <div className="group items-center cursor-pointer hidden sm:flex">
+                  <div className="w-3 h-3 rounded-full border-[1px] border-[#9747FF] group-hover:bg-[#9747FF]" />
+                  <p className="text-[#716083] group-hover:text-white">Reinforcement Learning with Human Feedback</p>
+                </div>
+                <div className="group items-center cursor-pointer hidden sm:flex">
+                  <div className="w-3 h-3 rounded-full border-[1px] border-[#9747FF] group-hover:bg-[#9747FF]" />
+                  <p className="text-[#716083] group-hover:text-white">Training Next-Gen Command LLM</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col lg:mr-10 lg:w-[400px] pb-5">
+                <div className="flex flex-row justify-between items-end pb-6">
+                  <h3 className="text-2xl font-medium text-white">Company</h3>
+                  <img
+                    src="/assets/icons/arrowDown.svg"
+                    alt=""
+                    height={36}
+                    width={36}
+                    className="lg:hidden"
+                  />
+                </div>
+                <div className="group items-center cursor-pointer hidden sm:flex">
+                  <div className="w-3 h-3 rounded-full border-[1px] border-[#9747FF] group-hover:bg-[#9747FF]" />
+                  <p className="text-[#716083] group-hover:text-white">Home</p>
+                </div>
+                <div className="group items-center cursor-pointer hidden sm:flex">
+                  <div className="w-3 h-3 rounded-full border-[1px] border-[#9747FF] group-hover:bg-[#9747FF]" />
+                  <p className="text-[#716083] group-hover:text-white">Blog</p>
+                </div>
+                <div className="group items-center cursor-pointer hidden sm:flex">
+                  <div className="w-3 h-3 rounded-full border-[1px] border-[#9747FF] group-hover:bg-[#9747FF]" />
+                  <p className="text-[#716083] group-hover:text-white">About</p>
+                </div>
+                <div className="group items-center cursor-pointer hidden sm:flex">
+                  <div className="w-3 h-3 rounded-full border-[1px] border-[#9747FF] group-hover:bg-[#9747FF]" />
+                  <p className="text-[#716083] group-hover:text-white">Careers</p>
+                </div>
+                <div className="group items-center cursor-pointer hidden sm:flex">
+                  <div className="w-3 h-3 rounded-full border-[1px] border-[#9747FF] group-hover:bg-[#9747FF]" />
+                  <p className="text-[#716083] group-hover:text-white">Contact</p>
+                </div>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <h3 className="text-2xl pb-7">Company</h3>
-              <p>Home</p>
-              <p>Blog</p>
-              <p>About</p>
-              <p>Careers</p>
-              <p>Contact</p>
+
+            <div className="lg:flex text-white">
+              <div className="flex flex-col lg:mr-10 lg:w-[400px] pb-5">
+                <div className="flex flex-row justify-between items-end pb-6">
+                  <h3 className="text-2xl font-medium text-white">Developers</h3>
+                  <img
+                    src="/assets/icons/arrowDown.svg"
+                    alt=""
+                    height={36}
+                    width={36}
+                    className="lg:hidden"
+                  />
+                </div>
+                <div className="group items-center cursor-pointer hidden sm:flex">
+                  <div className="w-3 h-3 rounded-full border-[1px] border-[#9747FF] group-hover:bg-[#9747FF]" />
+                  <p className="text-[#716083] group-hover:text-white">Phyton SDK</p>
+                </div>
+                <div className="group items-center cursor-pointer hidden sm:flex">
+                  <div className="w-3 h-3 rounded-full border-[1px] border-[#9747FF] group-hover:bg-[#9747FF]" />
+                  <p className="text-[#716083] group-hover:text-white">API Documentation</p>
+                </div>
+                <div className="group items-center cursor-pointer hidden sm:flex">
+                  <div className="w-3 h-3 rounded-full border-[1px] border-[#9747FF] group-hover:bg-[#9747FF]" />
+                  <p className="text-[#716083] group-hover:text-white">Support</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col lg:mr-10 lg:w-[400px] pb-5">
+                <div className="flex flex-row justify-between items-end pb-6">
+                  <h3 className="text-2xl font-medium text-white">Platform</h3>
+                  <img
+                    src="/assets/icons/arrowDown.svg"
+                    alt=""
+                    height={36}
+                    width={36}
+                    className="lg:hidden"
+                  />
+                </div>
+                <div className="group items-center cursor-pointer hidden sm:flex">
+                  <div className="w-3 h-3 rounded-full border-[1px] border-[#9747FF] group-hover:bg-[#9747FF]" />
+                  <p className="text-[#716083] group-hover:text-white">Pricing</p>
+                </div>
+                <div className="group items-center cursor-pointer hidden sm:flex">
+                  <div className="w-3 h-3 rounded-full border-[1px] border-[#9747FF] group-hover:bg-[#9747FF]" />
+                  <p className="text-[#716083] group-hover:text-white">Use Cases</p>
+                </div>
+                <div className="group items-center cursor-pointer hidden sm:flex">
+                  <div className="w-3 h-3 rounded-full border-[1px] border-[#9747FF] group-hover:bg-[#9747FF]" />
+                  <p className="text-[#716083] group-hover:text-white">Customers</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="lg:flex text-white">
-            <div className="flex flex-col lg:mr-10 lg:w-[400px] pb-5">
-              <h3 className="text-2xl pb-7">Developers</h3>
-              <p>Python SDK</p>
-              <p>API Documentation</p>
-              <p>Support</p>
-            </div>
-            <div className="flex flex-col">
-              <h3 className="text-2xl pb-7">Platform</h3>
-              <p>Pricing</p>
-              <p>Use Cases</p>
-              <p>Customers</p>
-            </div>
-          </div>
-        </div>
+
+
+          
       </div>
     </div>
   );
