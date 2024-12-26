@@ -17,7 +17,7 @@ const Footer = () => {
 
   return (
     <div className="bg-custom-gradient flex flex-col lg:h-[900px] lg:px-28">
-      <div className="flex flex-col w-full lg:flex-row lg:justify-between items-center lg:pt-7 pt-20">
+      <div className="flex flex-col w-full lg:flex-row lg:justify-between items-center lg:pt-7 pt-20 ">
         <div className="flex lg:flex-row lg:items-center flex-col">
           <div className="flex flex-row items-center justify-center pb-2">
             <img src="/assets/icons/thunder.svg" alt="logo" className="h-14 w-14" />
@@ -30,7 +30,7 @@ const Footer = () => {
             Powering the world's LLMs
           </p>
         </div>
-        <div className="flex flex-row lg:gap-3 gap-3">
+        <div className="flex flex-row gap-3 ">
           <div className="rounded-full lg:w-10 lg:h-10 h-14 w-14 flex items-center justify-center border-[1px] border-[#231C29] cursor-pointer hover:bg-[#8200FF]">
             <img src="/assets/icons/linkedIn.png" alt="linkedin-logo" className="lg:h-3 lg:w-3 h-5 w-5" />
           </div>
@@ -46,14 +46,14 @@ const Footer = () => {
       <div className="flex h-[1px] bg-[#1A171D] my-12 lg:my-4"></div>
 
       <div className="flex flex-col lg:flex-row">
-        <div className="flex flex-col lg:w-5/12 lg:pt-20">
+        <div className="flex flex-col lg:w-4/12 lg:pt-20">
           <h2 className="px-10 text-center text-3xl lg:text-4xl font-medium text-white pb-10 lg:text-left lg:px-0">
             Welcome to <br /> the world's largest RLHF platform
           </h2>
           <div className="flex justify-center lg:justify-start flex-col items-center lg:items-start">
             <a
               href="getStarted"
-              className="inline-flex items-center px-4 py-2 rounded-full bg-transparent transition-all duration-500 hover:bg-[#8200FF] hover:border-transparent text-white text-2xl border lg:text-md border-[#2D1E3B] mb-14"
+              className="inline-flex items-center px-4 py-2 rounded-full bg-transparent transition-all duration-500 hover:bg-[#8200FF] hover:border-transparent text-white text-2xl border lg:text-md border-[#2D1E3B] mb-14 lg:mb-32"
               aria-label="Get Started"
             >
               Get Started
@@ -108,7 +108,8 @@ const Footer = () => {
           ></div>
         </div>
 
-        <FooterLinks />
+        <div className="flex flex-col lg:w-7/12"><FooterLinks /></div>
+        
           
       </div>
     </div>
