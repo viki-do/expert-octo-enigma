@@ -16,7 +16,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="bg-custom-gradient flex flex-col lg:h-[900px] lg:px-28">
+    <div className="bg-custom-gradient flex flex-col lg:px-28 flex-grow h-full overflow-hidden">
       <div className="flex flex-col w-full lg:flex-row lg:justify-between items-center lg:pt-7 pt-20 ">
         <div className="flex lg:flex-row lg:items-center flex-col">
           <div className="flex flex-row items-center justify-center pb-2">
@@ -43,9 +43,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex h-[1px] bg-[#1A171D] my-12 lg:my-4"></div>
+      <div className="flex h-[1px] bg-[#1A171D] my-12 lg:my-4 lg:mx-0 mx-5" />
 
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row pb-10">
         <div className="flex flex-col lg:w-4/12 lg:pt-20">
           <h2 className="px-10 text-center text-3xl lg:text-4xl font-medium text-white pb-10 lg:text-left lg:px-0">
             Welcome to <br /> the world's largest RLHF platform
@@ -100,18 +100,43 @@ const Footer = () => {
               <p className={`${isFocused ? 'text-white' : 'text-[#8B8294]'} text-lg lg:text-sm`}>Subscribe</p>
             </div>
           </div>
-
           <div
             className={`flex ${
               isFocused ? 'h-[2px] bg-white' : 'h-[1px] bg-[#694BC3]'
             } transition-all duration-300 mx-5 lg:mx-0`}
-          ></div>
+          />
         </div>
-
-        <div className="flex flex-col lg:w-7/12"><FooterLinks /></div>
-        
-          
+        <div className="flex flex-col lg:w-7/12">
+          <FooterLinks />
+          <div
+          className='flex h-[1px] bg-[#694BC3] mx-5 lg:mx-0 lg:ml-44 mt-6 lg:mt-36'/>
+        </div>
       </div>
+
+      <div className='flex lg:text-sm flex-col lg:flex-row lg:space-x-[360px] pb-14 lg:pb-4'>
+        <div className='text-[#CEC4ED] mx-auto pb-8 lg:mx-0'>
+          <p>2024 © Surge AI. All Rights Reserved</p>
+        </div>
+        <div className='flex text-white mx-auto text-md lg:text-sm lg:text-[#CEC4ED]'>
+          <div className='flex flex-row'>
+            <div className='flex flex-row'>
+              <p className='pr-4 lg:pr-6 lg:hover:text-white cursor-pointer'>Sitemap</p>
+              <p>/</p>
+            </div>
+            <div className='flex flex-row'>
+              <p className='pl-4 pr-4 lg:pl-6 lg:pr-6 lg:hover:text-white cursor-pointer'>Terms of Service</p>
+              <p>/</p>
+            </div>
+            <div className='flex flex-row'>
+              <p className='pl-4 lg:pr-6 lg:hover:text-white cursor-pointer'>Privacy Policy</p>
+            </div> 
+            <div className='flex flex-row lg:ml-28'>
+              <p className='hidden lg:block'>Go to top</p> {/* Ez rejtve lesz kis képernyőkön */}
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </div>
   );
 };

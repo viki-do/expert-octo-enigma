@@ -35,7 +35,7 @@ const FooterLinks = () => {
   return (
     <div className="flex flex-col lg:w-full pt-20 lg:pl-48">
       {/* Első rész */}
-      <div className="lg:flex text-white lg:space-x-16">
+      <div className="lg:flex text-white lg:space-x-16 lg:pb-16">
         {footerData.slice(0, 2).map((section, index) => (
           <div key={index} className="flex flex-col lg:mr-10  pb-5 px-6 lg:px-0 ">
             {/* Fejléc (kattintható kis kijelőn) */}
@@ -65,7 +65,7 @@ const FooterLinks = () => {
               {section.links.map((link, i) => (
                 <div
                   key={i}
-                  className={`group items-center cursor-pointer pb-5 lg:pb-0 ${
+                  className={`group items-center cursor-pointer pb-5 lg:pb-3 ${
                     openSection === index ? "flex" : "hidden"
                   } sm:flex lg:flex`}
                 >
@@ -74,6 +74,8 @@ const FooterLinks = () => {
                 </div>
               ))}
             </div>
+            <div className="flex h-[1px] bg-[#6044B4] my-2 lg:hidden"></div>
+
           </div>
 
         ))}
@@ -110,7 +112,7 @@ const FooterLinks = () => {
               {section.links.map((link, i) => (
                 <div
                   key={i}
-                  className={`group items-center cursor-pointer pb-5 lg:pb-0 ${
+                  className={`group items-center cursor-pointer pb-5 lg:pb-3 ${
                     openSection === index + 2 ? "flex" : "hidden"
                   } sm:flex lg:flex`}
                 >
@@ -119,6 +121,7 @@ const FooterLinks = () => {
                 </div>
               ))}
             </div>
+            <div className="flex h-[1px] bg-[#6044B4] my-2 lg:hidden"></div>
           </div>
         ))}
       </div>
